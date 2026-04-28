@@ -1,10 +1,7 @@
 ---
-title: "test"
-format: html
----
-
----
-
+title: "Part II : Mini thesis based on Quarto + Gretl"
+author: "Andreas Moen, Oskar Pettersson, Philip Jacobsen"
+format: pdf
 ---
 
 ## Andreas Moen, Oskar Petterson, Philip Jacobsen 
@@ -43,7 +40,7 @@ From the output we have 250 000 observations and  the dependent variable is the
 | Constant         | 147 168      | 175.45      | 838.8    | 0.000           |
 | Education Level  | -482.9       | 52.85       | -9.14    | 6.45\*10\^-20   |
 
-We also have a R squared value of 0.000334 and a F statistic p value of 6.45\*10\^-20 
+We also have a R squared value of 0.000334 and a F statistic p value of $$6.45*10^-20$$  
 
 We can see there is a big significance between salary and education level.
 
@@ -55,11 +52,11 @@ c\) Evaluate the significance of the independent variable(s) at a 5% significanc
 
 level.  
 
-We can clearly see that 6.45\*10\^-20 is \< 0.05 so the variable is statistically very significant. Even though its significant the R squared value is very low, which can be interpretated as the model not explaining the variation in the salary.  
+We can clearly see that $$6.45*10^-20 is < 0.05$$ so the variable is statistically very significant. Even though its significant the R squared value is very low, which can be interpretated as the model not explaining the variation in the salary.  
 
 d\) Make predictions using the model at different values of an independent variable. 
 
-We just plug in different variables for the education level. After we ran the simple regression model we got this equation: salary = 147168 + (-482,90) × education_level. By using this equation we can predict the salary based on the education levels.
+We just plug in different variables for the education level. After we ran the simple regression model we got this equation: $$salary = 147168 + (-482,90) × education_level$$. By using this equation we can predict the salary based on the education levels.
 
 |                  |                   |
 |------------------|-------------------|
@@ -76,12 +73,21 @@ e\) Calculate a 95% prediction interval for a specific observation in your conte
 
 A 95% prediciton interval for a specific observation can be calculated as the predicted values plus or minus a critical value times the prediction standard error. Using the regression output the standard error of regression is 37401.78. So when education levels equals to 5 the predicted salery is.: 
 
-![](data:image/emf;base64,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)\
-![](data:image/emf;base64,iVBORw0KGgoAAAANSUhEUgAAANUAAAAaCAYAAAAg/hniAAAAAXNSR0IArs4c6QAAAHhlWElmTU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAIAAIdpAAQAAAABAAAAWgAAAAAAAACQAAAAAQAAAJAAAAABAAKgAgAEAAAAAQAAANWgAwAEAAAAAQAAABoAAAAAyGrziwAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAB+1JREFUeAHtlwmwllUZx++9oGK4gEuZCxii4eRGVpTaApY6lVhTuTQuV6em0lywbHEcCFrGMktaVCyX0ckx0EZnSCeXYnADRQUH0RQkCLNEx1QSRZR+v49zmOPr+75cvu/rC53zn/nd85znnPe85zznPOf9bndXV9ca+B5k5QjkCLQWgQk83tOfP5NgYmtj5adzBHIEYgRMqmb0CR46EKbDnGYG+D88szvvfKzivXviXwivQD/YFYpajOO1xFk33nb0GwhLkv7bYg8F3/N84m/FHMLDW8NDkM4tjrkjxsvwTHSEcgClc1xW8Ft13jvAIisF7Ux9s+DbhnIQ3BLq7SianVdxndY3L0xoOXXjXrcG17MbPAH/hKLMF/cwan+MmfCGvs18pTZhoJfgINjYZZBM/vkVEx2Lfw14QJVBs74aTDLLf0M8THXjbUG/K2EunAmqBy6FO2ACLIXToRW9nYddz41wMfwL9oZUHvon4ZupE9v1Pg7OpUxX4Zxd1oBvAawCE1W+De1Ss/MqW+c9TMpLxv0T9/NwUFVrmELbPLgAjOd4KGovHI4V1285POnUiKmZ14zMdg/Lfc083MFnRvKuc8BbaqeS9w7GV7xUvOF+CaeF/pa7gAGsG89YzoSb4XiIGoXRCyaCX4zH4BcwGVqRSXoyeHj2gJNgHER5OPrFSihNAr9sK8HDVpQH71BYXGxI6n4Fnk7q7TBbmVfZOv3SjIEVMATckz9CVNka3JvPg/vjl8fYToKiZuAYXXSm9Z5QeS/ltTAdbgKTRn0apsL1MA0OBPUhmAdujuqGU8E+jjEU3OC7wOz24N4PZvURMAuOBHU03AYjrJRoAD7HqGLTkmei6wGMz8Gd0VEo3ZDzC75HqMeE8ovsV+VXoU/deG6Ch/g7oW8sTMZXA/r84j2l0YJ8/qtgQqmt4LmGtfaP+zYQTLxUP6ZyNiwDb9xUg6n8CH6QOpuwm9mvZudVtc7PMu8VYe7foPRrHmMV3G8ojIsJ5Vk2H6rODE316h+aPVy++Gq4Dp6Fj4KHaRTsBPeBiaNMqrsb1to/3rxm/7FgUh4N/vR4Ea6BM8H2JfBJsM/XYSo8CsNhIZTJr4TjV6mXhqVVjTX+T9Hm18M5+JOnTF/E6bqd9/pk8q4G17YP3ACngIk4BWbCLPC9Y6FdOoqBtoXJYcBBlOfBx+HC4OtL8XM6yaqazq5vGpjEXpjfgpWQqt37VTWvvqxzOyZ2JLw7mWDdGryoTgIvx9HJM9H02ffA7cFxOeVlwX5dMZHaJfAwjExaZmN/OdQPo1yYtM3BPibUTQhvvRNgAjwOQ0Etg5iIDUf4M4ryuWCPpzwj2P+r4ksM7OGOckNMlINhBDh/E2gcRHVjLIADoiMpi+PZtBzODn12p/Rm9ALxwC8CN2xf+AuUbYTxdowyvG3LtD/Ov4FriLocw5t/GNwGP4VfQ6o/Uflu4nCeD8Ju4AU4D84C55vKZOqB7eEhuADaqQ2ZV1/W+X0mZ1KmqlvDHnT8CvjFmpY+lNiDgz2G8lWIv950T/BPf/+gk+Ec8Paxs7fzfqFO0XUcxM/h27AN9t2gHNSEGwj3ghv6EgyBd8JVUNRcHJvDnuAnvOxWwN3QcP5OCXZZcSLOpWUNNb4dabsBjoAYg0Ox/wBRn8F4AYxJX/QkneI83JRHYRhsA5uBvwSU8fHdJtkqiPKi2RC9g85u/LHwSPLg09jG9gx4F/juW6FOg2icAaeDCboD7ALPQqrnQ2U55XQ4KG0Mdjv3q25e61vnlszna/D+whzr1uCeief3CvBM/wdSxZj8GecScPyYG+v6eZAMhLoRTgOz2SzUfwg4EQN+AIwEBzbwbtoXYA4ogzC+Ya39kj0Y7LLCNpNwbFlj4huAvXcNmyZ9q8xTaJhf0egBXAO7FtrvoX5MwRerZeOdR+NFoYMXjzHywvkYuDFbg+qFxRotylvdm9Ev4V5QdvF48P2JVtQMHI1btdhA/QRwX6J6Mbxw3OvfQDeom+DihvX6P63s1wyG6uu80reWrfMsOni2U9Wt4Qo6+iFQXnj/aFhdXR+gHBdsPy69wfasr4aDQ91i3dznUpHfwmzYGdTV4M17PkyGReDPECe2Agyqt9kWcAf4U8nnPwLKZy5pWOV/fof72vKmtnn7MZLregJeA983GlK5pjVwbuL08vg79E98mnXjGZcr4Xq4FeLl0oP9M5gFl4HJarK1og/ysHNOua4w4H7Un4H7YVBoex/lVFgNT8GlsBVEud7bwUvgw8Fp3TPg+jwnN4PruwW2h3aomXnF95at0zb3PJ7F2LduDZ7nv8LvwXWOAXUqeBbUifAwXAPz4IeQal1STcTrzRoDn3byp0OUN3pUakffwGj0oRxGHxPQW3ZjlImQrn1D5mgsy+SYXkBvdhmXZmPTybVX7YNzqFrDJrSll0zVfLekobuksZFU8SZ+kQ5S1MuJY2WFHd3ebuvTCDr8BLwxjgJv0o1RftXStW/IHMvi6POO6Rf+za5m49LpdVftg/OoWsMrtMn69EJdB2/PTsok9tN6OCzo5Ivzu3IEOhWB+KXq1Pvm8yLJyhF4y0bA34X+szvpLbvCvLAcgc5FYDyvKvtfq3MzyG/KEcgRyBHIEcgRyBHIEcgRyBHIEcgRyBHIEcgRyBHIEcgRyBHIEcgRyBHIEcgRyBHIEcgRyBHIEcgRyBHIEdgoI/BfgdPPrO7T/RoAAAAASUVORK5CYII=)
+$$
+Salery=147168-482.9(5)
+$$
+
+$$
+salery=147168-2414.5=144753.5
+$$
 
 Then the approximate 95% prediciton interval:
 
-![](data:image/emf;base64,iVBORw0KGgoAAAANSUhEUgAAAJMAAAAaCAYAAACzWm4FAAAAAXNSR0IArs4c6QAAAHhlWElmTU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAIAAIdpAAQAAAABAAAAWgAAAAAAAACQAAAAAQAAAJAAAAABAAKgAgAEAAAAAQAAAJOgAwAEAAAAAQAAABoAAAAAMhghdwAAAAlwSFlzAAAWJQAAFiUBSVIk8AAABihJREFUaAXtmHvsl1Mcx3/dlUtI5pIui0guM5fFbKbIHy2MEbnFXLI2GzL+qR82JhZyN1mRkfs1seQP5V5zWaFiSlIx5FLR1ev17Tl19ux5nu/v1+/3hz/Oe3s953Nuzznncz7nfJ992zQ0NGyBmyEpeaAlHmhsT+9b4ZaWvCX1TR7QAwZTrB5kfoV1cWFk74O9L3wDRW06UX4gLIDmqBeNu8FCWJN13I20e2aHZC3GipDJ0v6k38KGqNy+feBrWB+VB/MgjMUhE6X1xnR9h8LvsARaQ/XG3J1B+sJyWJkbsMhvNnFfneeP8BuodtBbI6fvyW/OlYVskW8rY8BbqTOYGiC+IK82FEyB1+F2cAIDINaVZBbBNPB9TZHBYuC9BE+CmzQQ1A2wBQwS2QS2iXU6Gdv0jAot+wImwlIwuIPclDdgfijIpVVjDqet63P9s2AmGFwtVdWYj/Jy13IvrIJxoLrDAijym4fdPneC+zQSVC/QVxtBf5quhrI15H1bLwYaeVctiF4jDYvy1OY1jIIVYHSru+COmrX1MZZkLuwRlTXF3JtGD4ATVfNgQs3aOp8hmW0yG46L8o71GeigEExtsZfAYFCvwKSa1dBwFOmLMBnsVyR9UDbmMuquyDp1IXVDBmX5liRVYxq4YT9uwv4hG6jKb3fTxiBUF8Av0BEOgfsg6BoM97FIRb6tFwPbgskX7gZuTHySLVfXgT8ZQU7S4FF9wBvtYDMtkA76Gc4qeMeJlL2fK3+C/IUQB5NXu/ldQY0Bf5JjXU6mLJjidvkxv6Py0qxBV9KNkL+dre4Hh5Wwlw0qlB8zNPWwPQfPhIIozfvNG+uyrL4Xqf44PMuHpAOG67G+SEW+rYoB39Ho4xYfqCqYTqXeSbnYneBhCKdkNPbv8AIshjlwAOR1BAVFP3+WPQLefLdBkaZTeE5UMRR7BnjinFe4mU7B3gxBIzF+C5ksbWow5cc8jf4rIfz0lM11Km3eLeFiyquUH9O2o+ATmAfuUVCZ39yLs7NGO5PqH/0S6xIyBmeRynxbFQO+p9FHU4LJdjfCx/ASvAV+P6mH4ANwcZ0yewpprPZk/gEXkVc7CgxS5+HH8nkQ60gyS8B2yg/SpTAYvLp11gi4FoZk+bakyvKfatb2R1OCKT+mvR8DD8wA0HHOYU9oLRWN6bv7wVXgQX0egsr89gcNhmeN9Lv+0b9BbTC+ghNCQZRW+dZmZTFgXe2vAY2maDyNRHnyDCDlZvWAdWbQO3BSzdr+2Ig5EBZuL9pmbcKak3E06UUwDYJcgN9VtlP7watwBugs5a1hkK8yg7qDdjfIBxNFdZUfszM9/OlwUxaAm+G1PwgMsFhTyTjHIk2m8KmiCsryY4ZmizDEwzgFvG3WQJnfXLfrV65fLd+a1J5n8vwLwv5FVZW+td34DO04BszX5I2gnIBR3N8MctKNsL+ZSDr1c+iSlR1L6vUfbg6dNTGrq5d4szwYNZqFHfftS341eGKK5CY7595ZpXNYAedneTd6bGaHZDTG/JAhza+zaExPs5s0IuvnfNbDMVk+TvqR8RulCL9vilQ0pu2mQE8NNArCwajym/582Q7oXPiyZm1/+JMZ/BNKR2J4IGPlfRvX5WPAOmOl9vNyNemH4Mb42zwG9s3yx5OqA+EjeBx6QVBbDF9kpD4Nb0JXaIr602gpzIS3M8JpIttwD9yvUaLrKXfOd0T1w7AXwjSYDruAMtAmgad0MxhoJ0N+nWVjDqWtN5Lrfw/yQUrRDqtszBm80bU8Cx7gQaCq/OZ65oLr+xTigD+B/DIINzpmTbN5TsjskBT5tiwG7GMMbPtm0q6njhUNnGCnivqqKje8qK/jGQTNlTdJuDmb27femPFHcHPfXda+aswOdCobs8xvjuONm5cHv8jP+XZV+bIYaNY3kwN4tZfJ7yLZEf1d0qlqvJIutWJvq7VVDSrq6o35Z0XfHa2qGnMDL5UilfnNtmsKOngj/1tQ3pyi0rkaqUnJA63igRRMreLG9BI94HfOuOSK5IFW8ECKo1ZwYnpF8kDyQPJA8kDyQPJA8kDyQPJA8kDyQPJA8kDyQPJA8kDyQPJA8kDywP/RA/8Bg4V31BS9kvQAAAAASUVORK5CYII=) so that gives us
+$$
+1.96*37401.78=73307,49
+$$
+
+so that gives us
 
 So lower bound = 71 446.01
 
