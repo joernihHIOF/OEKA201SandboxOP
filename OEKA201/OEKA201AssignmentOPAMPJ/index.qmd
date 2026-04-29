@@ -1,6 +1,6 @@
 ---
 title: "OEKA201AssignmentOPAMPJ"
-format: inshtml
+format: html
 engine: knitr
 ---
 
