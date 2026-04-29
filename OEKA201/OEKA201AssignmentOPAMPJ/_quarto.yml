@@ -5,7 +5,7 @@ project:
     - "index.qmd"
     - "assignment_gretl.qmd"
     - "assignment_r.qmd"
-    - "assignsments_formats.qmd"
+    - "assignments_formats.qmd"
 #    - "AIrep/qmdrds/conv.qmd"
 
 website:
