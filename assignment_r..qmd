@@ -1,5 +1,26 @@
 ---
-title: "assignment_r."
+title: "Part III: Mini thesis based on Quarto + R/Python"
 format: html
 ---
+
+## Oskar Pettersson, Andreas Moen, Philip Jacobsen
+
+---
+abstract: |
+Create a Quarto Project Web Site and Style Your Quarto Document for Various Output Formats
+---
+
+---
+keywords: 
+  - Quarto formating
+  - Gretl
+  - RStudio webpage 
+---
+
+
+
+
+
+
+##Conclusion
 
