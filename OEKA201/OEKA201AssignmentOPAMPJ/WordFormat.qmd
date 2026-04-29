@@ -1,0 +1,10 @@
+---
+title: "Word Format"
+format: html
+---
+
+# Word Format
+
+You can download the Word document here:
+
+[Download Assignment Word Document](assignment.docx){.btn .btn-primary}
