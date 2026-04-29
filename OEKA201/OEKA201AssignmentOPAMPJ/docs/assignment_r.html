@@ -196,8 +196,11 @@ window.Quarto = {
   <ul>
   <li><a href="#andreas-moen-oskar-petterson-philip-jacobsen" id="toc-andreas-moen-oskar-petterson-philip-jacobsen" class="nav-link active" data-scroll-target="#andreas-moen-oskar-petterson-philip-jacobsen">Andreas Moen, Oskar Petterson, Philip Jacobsen</a></li>
   <li><a href="#topic-of-interest-the-correlation-between-salary-and-higher-education." id="toc-topic-of-interest-the-correlation-between-salary-and-higher-education." class="nav-link" data-scroll-target="#topic-of-interest-the-correlation-between-salary-and-higher-education.">Topic of interest: The correlation between salary and higher education.</a></li>
-  <li><a href="#simple-regression-model-estimate-a-simple-regression-model-where-you-define-your-dependent-and-indepen-dent-variable-based-on-your-rq." id="toc-simple-regression-model-estimate-a-simple-regression-model-where-you-define-your-dependent-and-indepen-dent-variable-based-on-your-rq." class="nav-link" data-scroll-target="#simple-regression-model-estimate-a-simple-regression-model-where-you-define-your-dependent-and-indepen-dent-variable-based-on-your-rq.">2. Simple Regression Model: Estimate a simple regression model where you define your dependent and indepen-dent variable based on your RQ.&nbsp;</a></li>
+  <li><a href="#simple-regression-model-estimate-a-simple-regression-model-where-you-define-your-dependent-and-indepen-dent-variable-based-on-your-rq." id="toc-simple-regression-model-estimate-a-simple-regression-model-where-you-define-your-dependent-and-indepen-dent-variable-based-on-your-rq." class="nav-link" data-scroll-target="#simple-regression-model-estimate-a-simple-regression-model-where-you-define-your-dependent-and-indepen-dent-variable-based-on-your-rq.">2. Simple Regression Model: Estimate a simple regression model where you define your dependent and indepen-dent variable based on your RQ.&nbsp;</a>
+  <ul class="collapse">
   <li><a href="#multiple-regression-model" id="toc-multiple-regression-model" class="nav-link" data-scroll-target="#multiple-regression-model">3. Multiple Regression Model</a></li>
+  <li><a href="#script-showcasing" id="toc-script-showcasing" class="nav-link" data-scroll-target="#script-showcasing">Script Showcasing</a></li>
+  </ul></li>
   <li><a href="#dummy-variable-analysis" id="toc-dummy-variable-analysis" class="nav-link" data-scroll-target="#dummy-variable-analysis">4-1. Dummy Variable Analysis</a></li>
   <li><a href="#model-selection-and-analysis" id="toc-model-selection-and-analysis" class="nav-link" data-scroll-target="#model-selection-and-analysis">5. Model Selection and Analysis</a></li>
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a>
@@ -337,9 +340,96 @@ salery=147168-2414.5=144753.5
 <p>And upper bound = 218060.99 so the approximate 95% prediction interval is given as.:</p>
 <p>(71446.01, 218060.99)</p>
 <p>This means that the actual salary for an individual with education level 5 is expected to lie within thhis interval with 95% confidence.</p>
+<section id="multiple-regression-model" class="level2">
+<h2 class="anchored" data-anchor-id="multiple-regression-model">3. Multiple Regression Model</h2>
 </section>
-<section id="multiple-regression-model" class="level1">
-<h1>3. Multiple Regression Model</h1>
+<section id="script-showcasing" class="level2">
+<h2 class="anchored" data-anchor-id="script-showcasing">Script Showcasing</h2>
+<p>You can find the script in the script folder.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = salary ~ education_level, data = df)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-113153  -24825   -1921   22695  169070 
+
+Coefficients:
+                           Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)                142410.5      159.2  894.79   &lt;2e-16 ***
+education_levelDiploma      -5252.0      225.3  -23.31   &lt;2e-16 ***
+education_levelHigh School -10695.2      225.0  -47.55   &lt;2e-16 ***
+education_levelMaster       10894.8      224.6   48.50   &lt;2e-16 ***
+education_levelPhD          21565.5      225.2   95.77   &lt;2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 35570 on 249995 degrees of freedom
+Multiple R-squared:  0.09584,   Adjusted R-squared:  0.09583 
+F-statistic:  6625 on 4 and 249995 DF,  p-value: &lt; 2.2e-16
+
+
+Call:
+lm(formula = salary ~ education_level + experience_years + industry, 
+    data = df)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-107845  -20898   -1398   20007  144375 
+
+Coefficients:
+                            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)                115193.60     257.35 447.608   &lt;2e-16 ***
+education_levelDiploma      -5253.98     199.95 -26.277   &lt;2e-16 ***
+education_levelHigh School -10658.11     199.66 -53.382   &lt;2e-16 ***
+education_levelMaster       11014.40     199.38  55.244   &lt;2e-16 ***
+education_levelPhD          21614.77     199.87 108.145   &lt;2e-16 ***
+experience_years             2703.96      10.42 259.533   &lt;2e-16 ***
+industryEducation             331.60     281.98   1.176    0.240    
+industryFinance               221.56     280.57   0.790    0.430    
+industryGovernment            205.41     281.94   0.729    0.466    
+industryHealthcare            167.25     281.95   0.593    0.553    
+industryManufacturing        -125.84     281.59  -0.447    0.655    
+industryMedia                 345.84     281.56   1.228    0.219    
+industryRetail               -371.28     282.11  -1.316    0.188    
+industryTechnology            182.57     281.94   0.648    0.517    
+industryTelecom               259.47     282.06   0.920    0.358    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 31570 on 249985 degrees of freedom
+Multiple R-squared:  0.2878,    Adjusted R-squared:  0.2877 
+F-statistic:  7215 on 14 and 249985 DF,  p-value: &lt; 2.2e-16
+
+
+Call:
+lm(formula = salary ~ education_level + experience_years + remote_work, 
+    data = df)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-106068  -20830   -1418   19937  145964 
+
+Coefficients:
+                            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)                113482.92     196.57  577.32   &lt;2e-16 ***
+education_levelDiploma      -5271.56     199.32  -26.45   &lt;2e-16 ***
+education_levelHigh School -10658.30     199.03  -53.55   &lt;2e-16 ***
+education_levelMaster       10990.52     198.75   55.30   &lt;2e-16 ***
+education_levelPhD          21603.40     199.24  108.43   &lt;2e-16 ***
+experience_years             2704.41      10.39  260.40   &lt;2e-16 ***
+remote_workNo                 141.66     153.98    0.92    0.358    
+remote_workYes               5401.37     154.31   35.00   &lt;2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 31470 on 249992 degrees of freedom
+Multiple R-squared:  0.2922,    Adjusted R-squared:  0.2922 
+F-statistic: 1.475e+04 on 7 and 249992 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+</div>
 <p>Expand your model by including additional relevant variables.</p>
 <p>a) Explain the choice of additional variables</p>
 <p>We wanted to see how the industry, education level and experience have a correlation with salary. And it seems that there is a significant between education level, experience but not a big correlation with industry. Which make sense as you can have high and low salaries in all kinds of industry fields.</p>
@@ -354,6 +444,7 @@ salery=147168-2414.5=144753.5
 <p>At the 5% significance level, the variables education level and experience years are statistically significant, as their p values are far below 0.05 (close to 0.00). Which means both variables have a significant effect on salary. In contrast the variable industry has a p value of 0.536 which is greater than 0.05 indicating that its not statistically significant. Therefore, there is no evidence that industry affects salary in this model.</p>
 <p>e) Compare the results to your simple regression analysis.</p>
 <p>Compared to the simple regression model the multipåle regression model provides a much better fit to the data. The R Squared increases significantly from 0.000334 to 0.1918 indicating that the model explains a muchg larger share of the variation in salary. The coefficient for education level remains negative and statistically significant, but its magnitude decreases slightly when additional variables are included. This suggests that the simple model may suffer from omitted variable bias, particularly due to the exclusion of experience. Furthermore, experience years is highly significant and has a strong positive effect on salary, while the industry variable is not statistically significant. Overall, the multiple regression model is more reliable and provides a better explanation of salary differences.</p>
+</section>
 </section>
 <section id="dummy-variable-analysis" class="level1">
 <h1>4-1. Dummy Variable Analysis</h1>
@@ -389,36 +480,36 @@ salery=147168-2414.5=144753.5
 <section id="word-count" class="level2">
 <h2 class="anchored" data-anchor-id="word-count">Word count</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>count_words_qmd <span class="ot">&lt;-</span> <span class="cf">function</span>(file) {</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  text <span class="ot">&lt;-</span> <span class="fu">readLines</span>(file, <span class="at">warn =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Remove YAML header</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">length</span>(text) <span class="sc">&gt;</span> <span class="dv">2</span> <span class="sc">&amp;&amp;</span> text[<span class="dv">1</span>] <span class="sc">==</span> <span class="st">"---"</span>) {</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    end_yaml <span class="ot">&lt;-</span> <span class="fu">which</span>(text[<span class="sc">-</span><span class="dv">1</span>] <span class="sc">==</span> <span class="st">"---"</span>)[<span class="dv">1</span>] <span class="sc">+</span> <span class="dv">1</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    text <span class="ot">&lt;-</span> text[<span class="sc">-</span><span class="fu">seq_len</span>(end_yaml)]</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Remove code chunks</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  in_chunk <span class="ot">&lt;-</span> <span class="fu">grepl</span>(<span class="st">"^```"</span>, text)</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  chunk_id <span class="ot">&lt;-</span> <span class="fu">cumsum</span>(in_chunk)</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  text <span class="ot">&lt;-</span> text[<span class="sc">!</span>(chunk_id <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">1</span>)]</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Remove markdown links but keep link text</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  text <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">"</span><span class="sc">\\</span><span class="st">[([^]]+)</span><span class="sc">\\</span><span class="st">]</span><span class="sc">\\</span><span class="st">(([^)]+)</span><span class="sc">\\</span><span class="st">)"</span>, <span class="st">"</span><span class="sc">\\</span><span class="st">1"</span>, text)</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Remove markdown symbols</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  text <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">"[#&gt;*_`~</span><span class="sc">\\</span><span class="st">-]"</span>, <span class="st">" "</span>, text)</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  words <span class="ot">&lt;-</span> <span class="fu">unlist</span>(<span class="fu">strsplit</span>(<span class="fu">paste</span>(text, <span class="at">collapse =</span> <span class="st">" "</span>), <span class="st">"</span><span class="sc">\\</span><span class="st">s+"</span>))</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  words <span class="ot">&lt;-</span> words[<span class="fu">nchar</span>(words) <span class="sc">&gt;</span> <span class="dv">0</span>]</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">length</span>(words)</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>word_count <span class="ot">&lt;-</span> <span class="fu">count_words_qmd</span>(<span class="st">"assignment_r.qmd"</span>)</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Word count:"</span>, word_count)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>count_words_qmd <span class="ot">&lt;-</span> <span class="cf">function</span>(file) {</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  text <span class="ot">&lt;-</span> <span class="fu">readLines</span>(file, <span class="at">warn =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Remove YAML header</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">length</span>(text) <span class="sc">&gt;</span> <span class="dv">2</span> <span class="sc">&amp;&amp;</span> text[<span class="dv">1</span>] <span class="sc">==</span> <span class="st">"---"</span>) {</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    end_yaml <span class="ot">&lt;-</span> <span class="fu">which</span>(text[<span class="sc">-</span><span class="dv">1</span>] <span class="sc">==</span> <span class="st">"---"</span>)[<span class="dv">1</span>] <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    text <span class="ot">&lt;-</span> text[<span class="sc">-</span><span class="fu">seq_len</span>(end_yaml)]</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Remove code chunks</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  in_chunk <span class="ot">&lt;-</span> <span class="fu">grepl</span>(<span class="st">"^```"</span>, text)</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  chunk_id <span class="ot">&lt;-</span> <span class="fu">cumsum</span>(in_chunk)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  text <span class="ot">&lt;-</span> text[<span class="sc">!</span>(chunk_id <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">1</span>)]</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Remove markdown links but keep link text</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  text <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">"</span><span class="sc">\\</span><span class="st">[([^]]+)</span><span class="sc">\\</span><span class="st">]</span><span class="sc">\\</span><span class="st">(([^)]+)</span><span class="sc">\\</span><span class="st">)"</span>, <span class="st">"</span><span class="sc">\\</span><span class="st">1"</span>, text)</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Remove markdown symbols</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  text <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">"[#&gt;*_`~</span><span class="sc">\\</span><span class="st">-]"</span>, <span class="st">" "</span>, text)</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>  words <span class="ot">&lt;-</span> <span class="fu">unlist</span>(<span class="fu">strsplit</span>(<span class="fu">paste</span>(text, <span class="at">collapse =</span> <span class="st">" "</span>), <span class="st">"</span><span class="sc">\\</span><span class="st">s+"</span>))</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>  words <span class="ot">&lt;-</span> words[<span class="fu">nchar</span>(words) <span class="sc">&gt;</span> <span class="dv">0</span>]</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">length</span>(words)</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>word_count <span class="ot">&lt;-</span> <span class="fu">count_words_qmd</span>(<span class="st">"assignment_r.qmd"</span>)</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Word count:"</span>, word_count)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Word count: 1930</code></pre>
+<pre><code>Word count: 1941</code></pre>
 </div>
 </div>
 

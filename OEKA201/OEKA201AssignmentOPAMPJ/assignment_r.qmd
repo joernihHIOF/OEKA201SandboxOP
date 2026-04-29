@@ -97,7 +97,17 @@ And upper bound = 218060.99 so the approximate 95% prediction interval is given 
 
 This means that the actual salary for an individual with education level 5 is expected to lie within thhis interval with 95% confidence.
 
-# 3. Multiple Regression Model
+## 3. Multiple Regression Model
+
+## Script Showcasing 
+
+You can find the script in the script folder. 
+
+```{r}
+#| echo: false
+
+source("script/estm.R")
+```
 
 Expand your model by including additional relevant variables.
 
