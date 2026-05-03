@@ -1,5 +1,6 @@
+library(OEKA201AssignmentOPAMPJ)
 # Load dataset
-df <- read.csv("data-raw/job_salary_prediction_dataset.csv")
+df# <- read.csv("data-raw/job_salary_prediction_dataset.csv")
 
 # Convert categorical variables to factors
 df$education_level <- as.factor(df$education_level)
@@ -19,3 +20,5 @@ model_dummy <- lm(salary ~ education_level + experience_years + remote_work, dat
 print(summary(model_simple))
 print(summary(model_multiple))
 print(summary(model_dummy))
+
+

@@ -3,50 +3,47 @@ project:
   output-dir: docs
   render:
     - "index.qmd"
-    - "assignment_gretl.qmd"
+#    - "assignment_gretl.qmd"
     - "assignment_r.qmd"
-#    - "assignments_formats.qmd"
 #    - "AIrep/qmdrds/conv.qmd"
 
-#website:
-#  title: "OEKA201AssignmentOPAMPJ"
-#  navbar:
-#    left:
-#      -  text: Home
-#         href: index.qmd
-#      -  text: Bjørnar's assignment using Gretl
-##         href: assignment_gretl.qmd
-#      -  text: Bjørnar's assignment using R
-##         href: assignment_r.qmd
-#    right:
-#      - text: AI-conversation
-##        href: AIrep/qmdrds/conv.qmd
-#format:
-#  html:
-#    toc: true
-#    toc-depth: 3
-#    number-sections: false
-#    mainfont: "Monospace"
-#    css: styles.css
-#  docx:
-#    toc: true
-#    toc-depth: 3
-#    number-sections: false
-#  pdf:
-#    toc: true
-#    toc-depth: 3
-#    number-sections: false
-#    lof: true
-#    lot: true
-#  epub:
-#    toc: true
-#    toc-depth: 3
-#    number-sections: false
-#    lof: true
-#    lot: true
-#    mainfont: "Arial"
-#bibliography: ref.bib
+website:
+  title: "OEKA201AssignmentOPAMPJ"
+  navbar:
+    left:
+      -  text: Home
+         href: index.qmd
+      -  text: Bjørnar's assignment using Gretl
+#         href: assignment_gretl.qmd
+      -  text: Bjørnar's assignment using R
+#         href: assignment_r.qmd
+    right:
+      - text: AI-conversation
+#        href: AIrep/qmdrds/conv.qmd
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: false
+    mainfont: "Monospace"
+    css: styles.css
+  docx:
+    toc: true
+    toc-depth: 3
+    number-sections: false
+  pdf:
+    toc: true
+    toc-depth: 3
+    number-sections: false
+    lof: true
+    lot: true
+  epub:
+    toc: true
+    toc-depth: 3
+    number-sections: false
+    lof: true
+    lot: true
+    mainfont: "Arial"
+bibliography: ref.bib
 #
-
-
 

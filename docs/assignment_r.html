@@ -6,6 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Andreas Moen">
+<meta name="author" content="Oskar Petterson">
+<meta name="author" content="Philip Jacobsen">
+<meta name="keywords" content="Wine Prices, Regression Analysis, R Programming, Quarto, Data Analysis">
 
 <title>OEKA201AssignmentOPAMPJ</title>
 <style>
@@ -62,6 +66,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="site_libs/quarto-search/fuse.min.js"></script>
@@ -76,13 +81,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-3aa970819e70fbc78806154e5a1fcd28.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-ece42c8223ec2bf36298a08f122c9a68.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-ec8ad40494ff344d32a6bffe7185877a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -135,16 +140,74 @@ window.Quarto = {
 };
 </script>
 
+<link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="fullcontent quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">OEKA201AssignmentOPAMPJ</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <span class="nav-link">
+<span class="menu-text">Bjørnar's assignment using Gretl</span>
+    </span>
+  </li>  
+  <li class="nav-item">
+    <span class="nav-link">
+<span class="menu-text">Bjørnar's assignment using R</span>
+    </span>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <span class="nav-link">
+<span class="menu-text">AI-conversation</span>
+    </span>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#topic-of-interest-the-correlation-between-salary-and-higher-education." id="toc-topic-of-interest-the-correlation-between-salary-and-higher-education." class="nav-link active" data-scroll-target="#topic-of-interest-the-correlation-between-salary-and-higher-education.">Topic of interest: The correlation between salary and higher education.</a></li>
+  <li><a href="#simple-regression-model-estimate-a-simple-regression-model-where-you-define-your-dependent-and-indepen-dent-variable-based-on-your-rq." id="toc-simple-regression-model-estimate-a-simple-regression-model-where-you-define-your-dependent-and-indepen-dent-variable-based-on-your-rq." class="nav-link" data-scroll-target="#simple-regression-model-estimate-a-simple-regression-model-where-you-define-your-dependent-and-indepen-dent-variable-based-on-your-rq.">2. Simple Regression Model: Estimate a simple regression model where you define your dependent and indepen-dent variable based on your RQ.&nbsp;</a></li>
+  <li><a href="#multiple-regression-model" id="toc-multiple-regression-model" class="nav-link" data-scroll-target="#multiple-regression-model">3. Multiple Regression Model</a></li>
+  <li><a href="#script-showcasing" id="toc-script-showcasing" class="nav-link" data-scroll-target="#script-showcasing">Script Showcasing</a></li>
+  <li><a href="#dummy-variable-analysis" id="toc-dummy-variable-analysis" class="nav-link" data-scroll-target="#dummy-variable-analysis">4-1. Dummy Variable Analysis</a></li>
+  <li><a href="#model-selection-and-analysis" id="toc-model-selection-and-analysis" class="nav-link" data-scroll-target="#model-selection-and-analysis">5. Model Selection and Analysis</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#appendix" id="toc-appendix" class="nav-link" data-scroll-target="#appendix">Appendix</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="assignment_r.docx"><i class="bi bi-file-word"></i>MS Word</a></li><li><a href="assignment_r.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li><li><a href="assignment_r.epub"><i class="bi bi-file"></i>ePub</a></li></ul></div></nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -154,22 +217,145 @@ window.Quarto = {
 </div>
 
 
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Authors</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Andreas Moen </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Høgskolen i Østfold (HiOF)
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Oskar Petterson </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Høgskolen i Østfold (HiOF)
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Philip Jacobsen </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Høgskolen i Østfold (HiOF)
+          </p>
+      </div>
+  </div>
 
 <div class="quarto-title-meta">
 
-    
+      
   
     
   </div>
   
+<div>
+  <div class="abstract">
+    <div class="block-title">Abstract</div>
+    This mini-thesis analyzes ….
+  </div>
+</div>
 
+<div>
+  <div class="keywords">
+    <div class="block-title">Keywords</div>
+    <p>Wine Prices, Regression Analysis, R Programming, Quarto, Data Analysis</p>
+  </div>
+</div>
 
 </header>
 
 
-<section id="andreas-moen-oskar-petterson-philip-jacobsen" class="level2">
-<h2 class="anchored" data-anchor-id="andreas-moen-oskar-petterson-philip-jacobsen">Andreas Moen, Oskar Petterson, Philip Jacobsen</h2>
-</section>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"script/estm.R"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = salary ~ education_level, data = df)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-113153  -24825   -1921   22695  169070 
+
+Coefficients:
+                           Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)                142410.5      159.2  894.79   &lt;2e-16 ***
+education_levelDiploma      -5252.0      225.3  -23.31   &lt;2e-16 ***
+education_levelHigh School -10695.2      225.0  -47.55   &lt;2e-16 ***
+education_levelMaster       10894.8      224.6   48.50   &lt;2e-16 ***
+education_levelPhD          21565.5      225.2   95.77   &lt;2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 35570 on 249995 degrees of freedom
+Multiple R-squared:  0.09584,   Adjusted R-squared:  0.09583 
+F-statistic:  6625 on 4 and 249995 DF,  p-value: &lt; 2.2e-16
+
+
+Call:
+lm(formula = salary ~ education_level + experience_years + industry, 
+    data = df)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-107845  -20898   -1398   20007  144375 
+
+Coefficients:
+                            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)                115193.60     257.35 447.608   &lt;2e-16 ***
+education_levelDiploma      -5253.98     199.95 -26.277   &lt;2e-16 ***
+education_levelHigh School -10658.11     199.66 -53.382   &lt;2e-16 ***
+education_levelMaster       11014.40     199.38  55.244   &lt;2e-16 ***
+education_levelPhD          21614.77     199.87 108.145   &lt;2e-16 ***
+experience_years             2703.96      10.42 259.533   &lt;2e-16 ***
+industryEducation             331.60     281.98   1.176    0.240    
+industryFinance               221.56     280.57   0.790    0.430    
+industryGovernment            205.41     281.94   0.729    0.466    
+industryHealthcare            167.25     281.95   0.593    0.553    
+industryManufacturing        -125.84     281.59  -0.447    0.655    
+industryMedia                 345.84     281.56   1.228    0.219    
+industryRetail               -371.28     282.11  -1.316    0.188    
+industryTechnology            182.57     281.94   0.648    0.517    
+industryTelecom               259.47     282.06   0.920    0.358    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 31570 on 249985 degrees of freedom
+Multiple R-squared:  0.2878,    Adjusted R-squared:  0.2877 
+F-statistic:  7215 on 14 and 249985 DF,  p-value: &lt; 2.2e-16
+
+
+Call:
+lm(formula = salary ~ education_level + experience_years + remote_work, 
+    data = df)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-106068  -20830   -1418   19937  145964 
+
+Coefficients:
+                            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)                113482.92     196.57  577.32   &lt;2e-16 ***
+education_levelDiploma      -5271.56     199.32  -26.45   &lt;2e-16 ***
+education_levelHigh School -10658.30     199.03  -53.55   &lt;2e-16 ***
+education_levelMaster       10990.52     198.75   55.30   &lt;2e-16 ***
+education_levelPhD          21603.40     199.24  108.43   &lt;2e-16 ***
+experience_years             2704.41      10.39  260.40   &lt;2e-16 ***
+remote_workNo                 141.66     153.98    0.92    0.358    
+remote_workYes               5401.37     154.31   35.00   &lt;2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 31470 on 249992 degrees of freedom
+Multiple R-squared:  0.2922,    Adjusted R-squared:  0.2922 
+F-statistic: 1.475e+04 on 7 and 249992 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+</div>
 <section id="topic-of-interest-the-correlation-between-salary-and-higher-education." class="level1">
 <h1>Topic of interest: The correlation between salary and higher education.</h1>
 <p>Research question: Does higher education lead to higer salary?</p>
@@ -282,90 +468,33 @@ salery=147168-2414.5=144753.5
 <section id="script-showcasing" class="level1">
 <h1>Script Showcasing</h1>
 <p>You can find the script in the script folder.</p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>
-Call:
-lm(formula = salary ~ education_level, data = df)
-
-Residuals:
-    Min      1Q  Median      3Q     Max 
--113153  -24825   -1921   22695  169070 
-
-Coefficients:
-                           Estimate Std. Error t value Pr(&gt;|t|)    
-(Intercept)                142410.5      159.2  894.79   &lt;2e-16 ***
-education_levelDiploma      -5252.0      225.3  -23.31   &lt;2e-16 ***
-education_levelHigh School -10695.2      225.0  -47.55   &lt;2e-16 ***
-education_levelMaster       10894.8      224.6   48.50   &lt;2e-16 ***
-education_levelPhD          21565.5      225.2   95.77   &lt;2e-16 ***
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-
-Residual standard error: 35570 on 249995 degrees of freedom
-Multiple R-squared:  0.09584,   Adjusted R-squared:  0.09583 
-F-statistic:  6625 on 4 and 249995 DF,  p-value: &lt; 2.2e-16
-
-
-Call:
-lm(formula = salary ~ education_level + experience_years + industry, 
-    data = df)
-
-Residuals:
-    Min      1Q  Median      3Q     Max 
--107845  -20898   -1398   20007  144375 
-
-Coefficients:
-                            Estimate Std. Error t value Pr(&gt;|t|)    
-(Intercept)                115193.60     257.35 447.608   &lt;2e-16 ***
-education_levelDiploma      -5253.98     199.95 -26.277   &lt;2e-16 ***
-education_levelHigh School -10658.11     199.66 -53.382   &lt;2e-16 ***
-education_levelMaster       11014.40     199.38  55.244   &lt;2e-16 ***
-education_levelPhD          21614.77     199.87 108.145   &lt;2e-16 ***
-experience_years             2703.96      10.42 259.533   &lt;2e-16 ***
-industryEducation             331.60     281.98   1.176    0.240    
-industryFinance               221.56     280.57   0.790    0.430    
-industryGovernment            205.41     281.94   0.729    0.466    
-industryHealthcare            167.25     281.95   0.593    0.553    
-industryManufacturing        -125.84     281.59  -0.447    0.655    
-industryMedia                 345.84     281.56   1.228    0.219    
-industryRetail               -371.28     282.11  -1.316    0.188    
-industryTechnology            182.57     281.94   0.648    0.517    
-industryTelecom               259.47     282.06   0.920    0.358    
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-
-Residual standard error: 31570 on 249985 degrees of freedom
-Multiple R-squared:  0.2878,    Adjusted R-squared:  0.2877 
-F-statistic:  7215 on 14 and 249985 DF,  p-value: &lt; 2.2e-16
-
-
-Call:
-lm(formula = salary ~ education_level + experience_years + remote_work, 
-    data = df)
-
-Residuals:
-    Min      1Q  Median      3Q     Max 
--106068  -20830   -1418   19937  145964 
-
-Coefficients:
-                            Estimate Std. Error t value Pr(&gt;|t|)    
-(Intercept)                113482.92     196.57  577.32   &lt;2e-16 ***
-education_levelDiploma      -5271.56     199.32  -26.45   &lt;2e-16 ***
-education_levelHigh School -10658.30     199.03  -53.55   &lt;2e-16 ***
-education_levelMaster       10990.52     198.75   55.30   &lt;2e-16 ***
-education_levelPhD          21603.40     199.24  108.43   &lt;2e-16 ***
-experience_years             2704.41      10.39  260.40   &lt;2e-16 ***
-remote_workNo                 141.66     153.98    0.92    0.358    
-remote_workYes               5401.37     154.31   35.00   &lt;2e-16 ***
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-
-Residual standard error: 31470 on 249992 degrees of freedom
-Multiple R-squared:  0.2922,    Adjusted R-squared:  0.2922 
-F-statistic: 1.475e+04 on 7 and 249992 DF,  p-value: &lt; 2.2e-16</code></pre>
-</div>
-</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(OEKA201AssignmentOPAMPJ)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Load dataset</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>df<span class="co"># &lt;- read.csv("data-raw/job_salary_prediction_dataset.csv")</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert categorical variables to factors</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>education_level <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(df<span class="sc">$</span>education_level)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>industry <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(df<span class="sc">$</span>industry)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>remote_work <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(df<span class="sc">$</span>remote_work)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Simple regression</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>model_simple <span class="ot">&lt;-</span> <span class="fu">lm</span>(salary <span class="sc">~</span> education_level, <span class="at">data =</span> df)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Multiple regression</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>model_multiple <span class="ot">&lt;-</span> <span class="fu">lm</span>(salary <span class="sc">~</span> education_level <span class="sc">+</span> experience_years <span class="sc">+</span> industry, <span class="at">data =</span> df)</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Dummy variable model with remote work</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>model_dummy <span class="ot">&lt;-</span> <span class="fu">lm</span>(salary <span class="sc">~</span> education_level <span class="sc">+</span> experience_years <span class="sc">+</span> remote_work, <span class="at">data =</span> df)</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Show results</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">summary</span>(model_simple))</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">summary</span>(model_multiple))</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">summary</span>(model_dummy))</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Expand your model by including additional relevant variables.</p>
 <p>a) Explain the choice of additional variables</p>
 <p>We wanted to see how the industry, education level and experience have a correlation with salary. And it seems that there is a significant between education level, experience but not a big correlation with industry. Which make sense as you can have high and low salaries in all kinds of industry fields.</p>
@@ -412,44 +541,38 @@ F-statistic: 1.475e+04 on 7 and 249992 DF,  p-value: &lt; 2.2e-16</code></pre>
 <section id="conclusion" class="level1">
 <h1>Conclusion</h1>
 <p>We prefer model 2 because it has the highest R² which is 19,2%, compared to the other models that is far lower than this. A higher R² explains a bigger portion of the variation in the salary making it more accurate and gives us the most accurate information. The model does not explain all variation, but it gives us a reliable estimate and most accurate comparing to the other models we have used.</p>
-<section id="word-count" class="level2">
-<h2 class="anchored" data-anchor-id="word-count">Word count</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>count_words_qmd <span class="ot">&lt;-</span> <span class="cf">function</span>(file) {</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  text <span class="ot">&lt;-</span> <span class="fu">readLines</span>(file, <span class="at">warn =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Remove YAML header</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">length</span>(text) <span class="sc">&gt;</span> <span class="dv">2</span> <span class="sc">&amp;&amp;</span> text[<span class="dv">1</span>] <span class="sc">==</span> <span class="st">"---"</span>) {</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    end_yaml <span class="ot">&lt;-</span> <span class="fu">which</span>(text[<span class="sc">-</span><span class="dv">1</span>] <span class="sc">==</span> <span class="st">"---"</span>)[<span class="dv">1</span>] <span class="sc">+</span> <span class="dv">1</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    text <span class="ot">&lt;-</span> text[<span class="sc">-</span><span class="fu">seq_len</span>(end_yaml)]</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Remove code chunks</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  in_chunk <span class="ot">&lt;-</span> <span class="fu">grepl</span>(<span class="st">"^```"</span>, text)</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  chunk_id <span class="ot">&lt;-</span> <span class="fu">cumsum</span>(in_chunk)</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  text <span class="ot">&lt;-</span> text[<span class="sc">!</span>(chunk_id <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">1</span>)]</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Remove markdown links but keep link text</span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  text <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">"</span><span class="sc">\\</span><span class="st">[([^]]+)</span><span class="sc">\\</span><span class="st">]</span><span class="sc">\\</span><span class="st">(([^)]+)</span><span class="sc">\\</span><span class="st">)"</span>, <span class="st">"</span><span class="sc">\\</span><span class="st">1"</span>, text)</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Remove markdown symbols</span></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  text <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">"[#&gt;*_`~</span><span class="sc">\\</span><span class="st">-]"</span>, <span class="st">" "</span>, text)</span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>  words <span class="ot">&lt;-</span> <span class="fu">unlist</span>(<span class="fu">strsplit</span>(<span class="fu">paste</span>(text, <span class="at">collapse =</span> <span class="st">" "</span>), <span class="st">"</span><span class="sc">\\</span><span class="st">s+"</span>))</span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>  words <span class="ot">&lt;-</span> words[<span class="fu">nchar</span>(words) <span class="sc">&gt;</span> <span class="dv">0</span>]</span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">length</span>(words)</span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>word_count <span class="ot">&lt;-</span> <span class="fu">count_words_qmd</span>(<span class="st">"assignment_r.qmd"</span>)</span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Word count:"</span>, word_count)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Word count: 1941</code></pre>
-</div>
-</div>
-
-
 </section>
+<section id="appendix" class="level1">
+<h1>Appendix</h1>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(OEKA201AssignmentOPAMPJ)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Load dataset</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>df<span class="co"># &lt;- read.csv("data-raw/job_salary_prediction_dataset.csv")</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert categorical variables to factors</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>education_level <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(df<span class="sc">$</span>education_level)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>industry <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(df<span class="sc">$</span>industry)</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>remote_work <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(df<span class="sc">$</span>remote_work)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Simple regression</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>model_simple <span class="ot">&lt;-</span> <span class="fu">lm</span>(salary <span class="sc">~</span> education_level, <span class="at">data =</span> df)</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Multiple regression</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>model_multiple <span class="ot">&lt;-</span> <span class="fu">lm</span>(salary <span class="sc">~</span> education_level <span class="sc">+</span> experience_years <span class="sc">+</span> industry, <span class="at">data =</span> df)</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Dummy variable model with remote work</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>model_dummy <span class="ot">&lt;-</span> <span class="fu">lm</span>(salary <span class="sc">~</span> education_level <span class="sc">+</span> experience_years <span class="sc">+</span> remote_work, <span class="at">data =</span> df)</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Show results</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">summary</span>(model_simple))</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">summary</span>(model_multiple))</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">summary</span>(model_dummy))</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+
+
 </section>
 
 </main> <!-- /main -->

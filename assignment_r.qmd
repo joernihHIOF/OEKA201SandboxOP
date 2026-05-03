@@ -1,8 +1,21 @@
 ---
 title: "OEKA201AssignmentOPAMPJ"
+author:
+  - name: Andreas Moen
+    affiliation: Høgskolen i Østfold (HiOF)
+  - name: Oskar Petterson
+    affiliation: Høgskolen i Østfold (HiOF)
+  - name: Philip Jacobsen
+    affiliation: Høgskolen i Østfold (HiOF)
+abstract: "This mini-thesis analyzes ...."
+keywords: "Wine Prices, Regression Analysis, R Programming, Quarto, Data Analysis"
+engine: knitr
 ---
 
-## Andreas Moen, Oskar Petterson, Philip Jacobsen
+```{r}
+source("script/estm.R")
+```
+
 
 # Topic of interest: The correlation between salary and higher education.
 
@@ -101,11 +114,11 @@ This means that the actual salary for an individual with education level 5 is ex
 
 You can find the script in the script folder.
 
-```{r}
-#| echo: false
-
-source("script/estm.R")
+```{{r}}
+{{< include "script/estm.R" >}}
 ```
+
+
 
 Expand your model by including additional relevant variables.
 
@@ -187,39 +200,30 @@ b\) Based on these analyses and additional considerations (e.g., model fit, theo
 
 We prefer model 2 because it has the highest R² which is 19,2%, compared to the other models that is far lower than this. A higher R² explains a bigger portion of the variation in the salary making it more accurate and gives us the most accurate information. The model does not explain all variation, but it gives us a reliable estimate and most accurate comparing to the other models we have used.
 
-## Word count
 
-```{r}
-count_words_qmd <- function(file) {
-  text <- readLines(file, warn = FALSE)
-  
-  # Remove YAML header
-  if (length(text) > 2 && text[1] == "---") {
-    end_yaml <- which(text[-1] == "---")[1] + 1
-    text <- text[-seq_len(end_yaml)]
-  }
-  
-  # Remove code chunks
-  in_chunk <- grepl("^```", text)
-  chunk_id <- cumsum(in_chunk)
-  text <- text[!(chunk_id %% 2 == 1)]
-  
-  # Remove markdown links but keep link text
-  text <- gsub("\\[([^]]+)\\]\\(([^)]+)\\)", "\\1", text)
-  
-  # Remove markdown symbols
-  text <- gsub("[#>*_`~\\-]", " ", text)
-  
-  words <- unlist(strsplit(paste(text, collapse = " "), "\\s+"))
-  words <- words[nchar(words) > 0]
-  
-  length(words)
-}
 
-word_count <- count_words_qmd("assignment_r.qmd")
-cat("Word count:", word_count)
+# Appendix
+
+
+```{{r}}
+{{< include "script/estm.R" >}}
 ```
 
+```{r, eval=T}
+#| echo: false
+#| eval: true
+knitr::knit_exit()
+```
+
+
+## Word count
+
+
+
+```{r}
+ford_count <- count_words_qmd("assignment_r.qmd")
+cat("Word count:", word_count)
+```
 
 
 ```{r, eval=T}
