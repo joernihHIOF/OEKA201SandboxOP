@@ -1,5 +1,0 @@
----
-title: "assignment_gretl"
-format: html
----
-

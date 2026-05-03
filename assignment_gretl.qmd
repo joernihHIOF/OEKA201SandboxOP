@@ -1,7 +1,6 @@
 ---
 title: "Part II : Mini thesis based on Quarto + Gretl"
 author: "Andreas Moen, Oskar Pettersson, Philip Jacobsen"
-format: pdf
 ---
 
 ## Andreas Moen, Oskar Petterson, Philip Jacobsen 
@@ -180,3 +179,7 @@ tical soundness), discuss which model you would prefer for predicting outcomes
 within your context and why.
 
 We prefer model 2 because it has the highest R² which is 19,2%, compared to the other models that is far lower than this. A higher R² explains a bigger portion of the variation in the salary making it more accurate and gives us the most accurate information. The model does not explain all variation, but it gives us a reliable estimate and most accurate comparing to the other models we have used.
+
+
+
+

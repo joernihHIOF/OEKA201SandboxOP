@@ -7,14 +7,14 @@
 
 ## Confirmation
 ### Part 1
-JIH, confirmed.
+JIH, confirmed. 
 ### Part 2
-JIH, confirmed.
+JIH, confirmed. 
 ### Part 3
-JIH, confirmed.
-Added: AI-report (experimental)
+JIH, confirmed. 
 
-I believe we are done with the assignment. I´m not fully sure if we did everything but i believe so. 
-Go to OEKA201 -> OEKA201AssignmentOPAMPJ. I tried to make create different formats and on a second webpage but i did not work. So just ignore the "WordFormat.qmd" and "MS-WordFormat.R". 
+**Note:**
 
+* You may need to run **Build + Install** in RStudio for the web page to function properly.
+* An **AI assessment** feature has been added (experimental). You can continue the conversation in `ai_conv.R` if desired.
 

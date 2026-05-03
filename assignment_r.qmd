@@ -1,7 +1,5 @@
 ---
 title: "OEKA201AssignmentOPAMPJ"
-format: html
-engine: knitr
 ---
 
 ## Andreas Moen, Oskar Petterson, Philip Jacobsen
@@ -220,4 +218,12 @@ count_words_qmd <- function(file) {
 
 word_count <- count_words_qmd("assignment_r.qmd")
 cat("Word count:", word_count)
+```
+
+
+
+```{r, eval=T}
+#| echo: false
+#| eval: true
+knitr::knit_exit()
 ```
