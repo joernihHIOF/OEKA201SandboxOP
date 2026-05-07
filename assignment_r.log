@@ -1,7 +1,7 @@
 This is LuaHBTeX, Version 1.24.0 (TeX Live 2026)  (format=lualatex 2026.5.7)  7 MAY 2026 14:59
  restricted system commands enabled.
-**assignment_gretl.tex
-(./assignment_gretl.tex
+**assignment_r.tex
+(./assignment_r.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-03-20>
 Lua module: luaotfload 2024-12-03 v3.29 Lua based OpenType font support
@@ -485,72 +485,87 @@ Package microtype Info: Loading configuration file microtype.cfg.
 File: microtype.cfg 2026/03/01 v3.2d microtype main configuration file (RS)
 )
 LaTeX Info: Redefining \microtypesetup on input line 3065.
+) (/home/joernih/.TinyTeX/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2026/04/16 4.6a verbatim text (tvz,hv)
+\FV@CodeLineNo=\count312
+\FV@InFile=\read2
+\FV@TabBox=\box58
+\c@FancyVerbLine=\count313
+\FV@StepNumber=\count314
+\FV@OutFile=\write3
+) (/home/joernih/.TinyTeX/texmf-dist/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip69
+\fb@frw=\dimen163
+\fb@frh=\dimen164
+\FrameRule=\dimen165
+\FrameSep=\dimen166
 ) (/home/joernih/.TinyTeX/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
-\LTleft=\skip69
-\LTright=\skip70
-\LTpre=\skip71
-\LTpost=\skip72
-\LTchunksize=\count312
-\LTcapwidth=\dimen163
-\LT@head=\box58
-\LT@firsthead=\box59
-\LT@foot=\box60
-\LT@lastfoot=\box61
-\LT@gbox=\box62
-\LT@cols=\count313
-\LT@rows=\count314
-\c@LT@tables=\count315
-\c@LT@chunks=\count316
+\LTleft=\skip70
+\LTright=\skip71
+\LTpre=\skip72
+\LTpost=\skip73
+\LTchunksize=\count315
+\LTcapwidth=\dimen167
+\LT@head=\box59
+\LT@firsthead=\box60
+\LT@foot=\box61
+\LT@lastfoot=\box62
+\LT@gbox=\box63
+\LT@cols=\count316
+\LT@rows=\count317
+\c@LT@tables=\count318
+\c@LT@chunks=\count319
 \LT@p@ftn=\toks25
 )
-Class scrartcl Info: longtable captions redefined on input line 70.
+Class scrartcl Info: longtable captions redefined on input line 110.
 (/home/joernih/.TinyTeX/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen164
-\lightrulewidth=\dimen165
-\cmidrulewidth=\dimen166
-\belowrulesep=\dimen167
-\belowbottomsep=\dimen168
-\aboverulesep=\dimen169
-\abovetopsep=\dimen170
-\cmidrulesep=\dimen171
-\cmidrulekern=\dimen172
-\defaultaddspace=\dimen173
-\@cmidla=\count317
-\@cmidlb=\count318
-\@aboverulesep=\dimen174
-\@belowrulesep=\dimen175
-\@thisruleclass=\count319
-\@lastruleclass=\count320
-\@thisrulewidth=\dimen176
+\heavyrulewidth=\dimen168
+\lightrulewidth=\dimen169
+\cmidrulewidth=\dimen170
+\belowrulesep=\dimen171
+\belowbottomsep=\dimen172
+\aboverulesep=\dimen173
+\abovetopsep=\dimen174
+\cmidrulesep=\dimen175
+\cmidrulekern=\dimen176
+\defaultaddspace=\dimen177
+\@cmidla=\count320
+\@cmidlb=\count321
+\@aboverulesep=\dimen178
+\@belowrulesep=\dimen179
+\@thisruleclass=\count322
+\@lastruleclass=\count323
+\@thisrulewidth=\dimen180
 ) (/home/joernih/.TinyTeX/texmf-dist/tex/latex/tools/array.sty
 Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
-\col@sep=\dimen177
-\ar@mcellbox=\box63
-\extrarowheight=\dimen178
+\col@sep=\dimen181
+\ar@mcellbox=\box64
+\extrarowheight=\dimen182
 \NC@list=\toks26
-\extratabsurround=\skip73
-\backup@length=\skip74
-\ar@cellbox=\box64
+\extratabsurround=\skip74
+\backup@length=\skip75
+\ar@cellbox=\box65
 )
-\c@none=\count321
+\c@none=\count324
 (/home/joernih/.TinyTeX/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
-\calc@Acount=\count322
-\calc@Bcount=\count323
-\calc@Adimen=\dimen179
-\calc@Bdimen=\dimen180
-\calc@Askip=\skip75
-\calc@Bskip=\skip76
+\calc@Acount=\count325
+\calc@Bcount=\count326
+\calc@Adimen=\dimen183
+\calc@Bdimen=\dimen184
+\calc@Askip=\skip76
+\calc@Bskip=\skip77
 LaTeX Info: Redefining \setlength on input line 86.
 LaTeX Info: Redefining \addtolength on input line 87.
-\calc@Ccount=\count324
-\calc@Cskip=\skip77
+\calc@Ccount=\count327
+\calc@Cskip=\skip78
 ) (/home/joernih/.TinyTeX/texmf-dist/tex/latex/mdwtools/footnote.sty
 Package: footnote 1997/01/28 1.13 Save footnotes around boxes
-\fn@notes=\box65
-\fn@width=\dimen181
+\fn@notes=\box66
+\fn@width=\dimen185
 ) (/home/joernih/.TinyTeX/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
 (/home/joernih/.TinyTeX/texmf-dist/tex/latex/graphics/graphics.sty
@@ -562,10 +577,10 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: luatex.def on input line 106.
 )
-\Gin@req@height=\dimen182
-\Gin@req@width=\dimen183
+\Gin@req@height=\dimen186
+\Gin@req@width=\dimen187
 )
-\pandoc@box=\box66
+\pandoc@box=\box67
 (/home/joernih/.TinyTeX/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
 
@@ -574,36 +589,36 @@ Package tocbasic Info: Loading of class-dependent code for package caption3
 
 (/home/joernih/.TinyTeX/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
-\caption@tempdima=\dimen184
-\captionmargin=\dimen185
-\caption@leftmargin=\dimen186
-\caption@rightmargin=\dimen187
-\caption@width=\dimen188
-\caption@indent=\dimen189
-\caption@parindent=\dimen190
-\caption@hangindent=\dimen191
+\caption@tempdima=\dimen188
+\captionmargin=\dimen189
+\caption@leftmargin=\dimen190
+\caption@rightmargin=\dimen191
+\caption@width=\dimen192
+\caption@indent=\dimen193
+\caption@parindent=\dimen194
+\caption@hangindent=\dimen195
 )
-\c@caption@flags=\count325
-\c@continuedfloat=\count326
+\c@caption@flags=\count328
+\c@continuedfloat=\count329
 Package caption Info: longtable package is loaded.
 (/home/joernih/.TinyTeX/texmf-dist/tex/latex/caption/ltcaption.sty
 Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )) (/home/joernih/.TinyTeX/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count327
+\c@float@type=\count330
 \float@exts=\toks27
-\float@box=\box67
+\float@box=\box68
 \@float@everytoks=\toks28
-\@floatcapt=\box68
+\@floatcapt=\box69
 )
 \@float@every@codelisting=\toks29
-\c@codelisting=\count328
+\c@codelisting=\count331
 (/home/joernih/.TinyTeX/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
 Package caption Info: New subtype `subfigure' on input line 238.
-\c@subfigure=\count329
+\c@subfigure=\count332
 Package caption Info: New subtype `subtable' on input line 238.
-\c@subtable=\count330
+\c@subtable=\count333
 ) (/home/joernih/.TinyTeX/texmf-dist/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
 (/home/joernih/.TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty
@@ -636,19 +651,19 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 (/home/joernih/.TinyTeX/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
-\c@section@level=\count331
+\c@section@level=\count334
 ) (/home/joernih/.TinyTeX/texmf-dist/tex/generic/stringenc/stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
 )
-\@linkdim=\dimen192
-\Hy@linkcounter=\count332
-\Hy@pagecounter=\count333
+\@linkdim=\dimen196
+\Hy@linkcounter=\count335
+\Hy@pagecounter=\count336
 (/home/joernih/.TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2026-04-24 v7.01q Hyperref: PDFDocEncoding definition (HO)
 ) (/home/joernih/.TinyTeX/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count334
+\Hy@SavedSpaceFactor=\count337
 (/home/joernih/.TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2026-04-24 v7.01q Hyperref: PDF Unicode definition (HO)
 )
@@ -660,21 +675,21 @@ Package hyperref Info: Plain pages OFF on input line 4214.
 Package hyperref Info: Backreferencing OFF on input line 4219.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4466.
-\c@Hy@tempcnt=\count335
+\c@Hy@tempcnt=\count338
 (/home/joernih/.TinyTeX/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip19
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4805.
-\XeTeXLinkMargin=\dimen193
+\XeTeXLinkMargin=\dimen197
 (/home/joernih/.TinyTeX/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 (/home/joernih/.TinyTeX/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
-\Fld@menulength=\count336
-\Field@Width=\dimen194
-\Fld@charsize=\dimen195
+\Fld@menulength=\count339
+\Field@Width=\dimen198
+\Fld@charsize=\dimen199
 Package hyperref Info: Hyper figures OFF on input line 6091.
 Package hyperref Info: Link nesting OFF on input line 6096.
 Package hyperref Info: Hyper index ON on input line 6099.
@@ -682,15 +697,15 @@ Package hyperref Info: backreferencing OFF on input line 6106.
 Package hyperref Info: Link coloring OFF on input line 6111.
 Package hyperref Info: Link coloring with OCG OFF on input line 6116.
 Package hyperref Info: PDF/A mode OFF on input line 6121.
-\Hy@abspage=\count337
-\c@Item=\count338
-\c@Hfootnote=\count339
+\Hy@abspage=\count340
+\c@Item=\count341
+\c@Hfootnote=\count342
 )
 Package hyperref Info: Driver (autodetected): hluatex.
 (/home/joernih/.TinyTeX/texmf-dist/tex/latex/hyperref/hluatex.def
 File: hluatex.def 2026-04-24 v7.01q Hyperref driver for luaTeX
-\Fld@listcount=\count340
-\c@bookmark@seq@number=\count341
+\Fld@listcount=\count343
+\c@bookmark@seq@number=\count344
 (/home/joernih/.TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
 (/home/joernih/.TinyTeX/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
@@ -698,44 +713,44 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 284.
 )
-\Hy@SectionHShift=\skip78
+\Hy@SectionHShift=\skip79
 ) (/home/joernih/.TinyTeX/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
 File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO)
-\BKM@id=\count342
+\BKM@id=\count345
 ))
-Package hyperref Info: Option `colorlinks' set `true' on input line 163.
-No file assignment_gretl.aux.
+Package hyperref Info: Option `colorlinks' set `true' on input line 205.
+No file assignment_r.aux.
 
-\openout1 = assignment_gretl.aux
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 169.
-LaTeX Font Info:    ... okay on input line 169.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 169.
-LaTeX Font Info:    ... okay on input line 169.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 169.
-LaTeX Font Info:    ... okay on input line 169.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 169.
-LaTeX Font Info:    ... okay on input line 169.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 169.
-LaTeX Font Info:    ... okay on input line 169.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 169.
-LaTeX Font Info:    ... okay on input line 169.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 169.
-LaTeX Font Info:    ... okay on input line 169.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 169.
-LaTeX Font Info:    ... okay on input line 169.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 169.
-LaTeX Font Info:    ... okay on input line 169.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 169.
-LaTeX Font Info:    ... okay on input line 169.
-Package scrbase Info: activating english \abstractname on input line 169.
-Package scrbase Info: activating english \partname on input line 169.
-Package scrbase Info: activating english \figurename on input line 169.
-Package scrbase Info: activating english \tablename on input line 169.
-Package scrbase Info: activating english \contentsname on input line 169.
-Package scrbase Info: activating english \listfigurename on input line 169.
-Package scrbase Info: activating english \listtablename on input line 169.
-Package scrbase Info: activating english \refname on input line 169.
-Package scrbase Info: activating english \indexname on input line 169.
+\openout1 = assignment_r.aux
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 211.
+LaTeX Font Info:    ... okay on input line 211.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 211.
+LaTeX Font Info:    ... okay on input line 211.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 211.
+LaTeX Font Info:    ... okay on input line 211.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 211.
+LaTeX Font Info:    ... okay on input line 211.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 211.
+LaTeX Font Info:    ... okay on input line 211.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 211.
+LaTeX Font Info:    ... okay on input line 211.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 211.
+LaTeX Font Info:    ... okay on input line 211.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 211.
+LaTeX Font Info:    ... okay on input line 211.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 211.
+LaTeX Font Info:    ... okay on input line 211.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 211.
+LaTeX Font Info:    ... okay on input line 211.
+Package scrbase Info: activating english \abstractname on input line 211.
+Package scrbase Info: activating english \partname on input line 211.
+Package scrbase Info: activating english \figurename on input line 211.
+Package scrbase Info: activating english \tablename on input line 211.
+Package scrbase Info: activating english \contentsname on input line 211.
+Package scrbase Info: activating english \listfigurename on input line 211.
+Package scrbase Info: activating english \listtablename on input line 211.
+Package scrbase Info: activating english \refname on input line 211.
+Package scrbase Info: activating english \indexname on input line 211.
 (/home/joernih/.TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -743,19 +758,19 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/lmr/m/n --> TU/lmr/m/n on input line 169.
+(Font)                  OT1/lmr/m/n --> TU/lmr/m/n on input line 211.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> TU/lmr/m/it on input line 169.
+(Font)                  OT1/lmr/m/it --> TU/lmr/m/it on input line 211.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> TU/lmr/bx/n on input line 169.
+(Font)                  OT1/lmr/bx/n --> TU/lmr/bx/n on input line 211.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 169.
+(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 211.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> TU/lmss/bx/n on input line 169.
+(Font)                  OT1/lmss/bx/n --> TU/lmss/bx/n on input line 211.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 169.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 211.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/bx/n on input line 169.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/bx/n on input line 211.
 
 Package fontspec Info: 
 (fontspec)             latinmodern-math scale = 0.9999967668407183.
@@ -783,7 +798,7 @@ Package fontspec Info:
 (fontspec)             <->s*[0.9999967668407183]"[latinmodern-math.otf]:mode=base;script=math;language=dflt;mathfontdimen=xetex;"
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(0)/m/n' will be
-(Font)              scaled to size 10.95pt on input line 169.
+(Font)              scaled to size 10.95pt on input line 211.
 
 Package fontspec Info: 
 (fontspec)             latinmodern-math scale = 0.9999967668407183.
@@ -819,15 +834,15 @@ Package fontspec Info:
 (fontspec)             <->s*[0.9999967668407183]"[latinmodern-math.otf]:mode=base;script=math;language=dflt;mathfontdimen=xetex;"
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 10.95pt on input line 169.
+(Font)              scaled to size 10.95pt on input line 211.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 169.
+(Font)              `operators' in the math version `normal' on input line 211.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/lmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input line 169.
+(Font)                  OT1/lmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input line 211.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 169.
+(Font)              `operators' in the math version `bold' on input line 211.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/lmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on input line 169.
+(Font)                  OT1/lmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on input line 211.
 
 Package fontspec Info: 
 (fontspec)             latinmodern-math scale = 0.9999967668407183.
@@ -863,13 +878,13 @@ Package fontspec Info:
 (fontspec)             <->s*[0.9999967668407183]"[latinmodern-math.otf]:mode=base;script=math;language=dflt;mathfontdimen=xetex;mathfontdimen=tex2;"
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 169.
+(Font)              `symbols' in the math version `normal' on input line 211.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
-(Font)                  OMS/lmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on input line 169.
+(Font)                  OMS/lmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on input line 211.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 169.
+(Font)              `symbols' in the math version `bold' on input line 211.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
-(Font)                  OMS/lmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on input line 169.
+(Font)                  OMS/lmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on input line 211.
 
 Package fontspec Info: 
 (fontspec)             latinmodern-math scale = 0.9999967668407183.
@@ -905,48 +920,48 @@ Package fontspec Info:
 (fontspec)             <->s*[0.9999967668407183]"[latinmodern-math.otf]:mode=base;script=math;language=dflt;mathfontdimen=xetex;mathfontdimen=tex3;"
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `normal' on input line 169.
+(Font)              `largesymbols' in the math version `normal' on input line 211.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
-(Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/m/n on input line 169.
+(Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/m/n on input line 211.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 169.
+(Font)              `largesymbols' in the math version `bold' on input line 211.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/b/n on input line 169.
+(Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/b/n on input line 211.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 7.665pt on input line 169.
+(Font)              scaled to size 7.665pt on input line 211.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 5.475pt on input line 169.
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 169.
+(Font)              scaled to size 5.475pt on input line 211.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 211.
 (/home/joernih/.TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.95pt on input line 169.
+(Font)              scaled to size 10.95pt on input line 211.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.665pt on input line 169.
+(Font)              scaled to size 7.665pt on input line 211.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.475pt on input line 169.
+(Font)              scaled to size 5.475pt on input line 211.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 10.95pt on input line 169.
+(Font)              scaled to size 10.95pt on input line 211.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.665pt on input line 169.
+(Font)              scaled to size 7.665pt on input line 211.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.475pt on input line 169.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 169.
+(Font)              scaled to size 5.475pt on input line 211.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 211.
 (/home/joernih/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 169.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 211.
 (/home/joernih/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Info: Redefining \microtypecontext on input line 169.
-Package microtype Info: Applying patch `item' on input line 169.
-Package microtype Info: Applying patch `toc' on input line 169.
-Package microtype Info: Applying patch `eqnum' on input line 169.
-Package microtype Info: Applying patch `footnote' on input line 169.
-Package microtype Info: Applying patch `verbatim' on input line 169.
-LaTeX Info: Redefining \microtypesetup on input line 169.
+LaTeX Info: Redefining \microtypecontext on input line 211.
+Package microtype Info: Applying patch `item' on input line 211.
+Package microtype Info: Applying patch `toc' on input line 211.
+Package microtype Info: Applying patch `eqnum' on input line 211.
+Package microtype Info: Applying patch `footnote' on input line 211.
+Package microtype Info: Applying patch `verbatim' on input line 211.
+LaTeX Info: Redefining \microtypesetup on input line 211.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
@@ -964,74 +979,74 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring ON on input line 169.
+Package hyperref Info: Link coloring ON on input line 211.
 \g__cctab_next_cctab=\catcodetable15
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmss' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 14.4pt on input line 171.
+(Font)              scaled to size 14.4pt on input line 213.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 171.
+(Font)              scaled to size 10.0pt on input line 213.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 171.
+(Font)              scaled to size 7.0pt on input line 213.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 14.4pt on input line 171.
+(Font)              scaled to size 14.4pt on input line 213.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 171.
+(Font)              scaled to size 10.0pt on input line 213.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 171.
+(Font)              scaled to size 7.0pt on input line 213.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 14.4pt on input line 171.
+(Font)              scaled to size 14.4pt on input line 213.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 171.
+(Font)              scaled to size 10.0pt on input line 213.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 171.
+(Font)              scaled to size 7.0pt on input line 213.
 (/home/joernih/.TinyTeX/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 ) (/home/joernih/.TinyTeX/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-Package tocbasic Info: character protrusion at toc deactivated on input line 175.
-No file assignment_gretl.toc.
-\tf@toc=\write3
+Package tocbasic Info: character protrusion at toc deactivated on input line 220.
+No file assignment_r.toc.
+\tf@toc=\write4
 
-\openout3 = assignment_gretl.toc
-Package tocbasic Info: character protrusion at lof deactivated on input line 177.
-No file assignment_gretl.lof.
-\tf@lof=\write4
+\openout4 = assignment_r.toc
+Package tocbasic Info: character protrusion at lof deactivated on input line 222.
+No file assignment_r.lof.
+\tf@lof=\write5
 
-\openout4 = assignment_gretl.lof
-Package tocbasic Info: character protrusion at lot deactivated on input line 178.
-No file assignment_gretl.lot.
-\tf@lot=\write5
+\openout5 = assignment_r.lof
+Package tocbasic Info: character protrusion at lot deactivated on input line 223.
+No file assignment_r.lot.
+\tf@lot=\write6
 
-\openout5 = assignment_gretl.lot
+\openout6 = assignment_r.lot
 [1
 
 
-{/home/joernih/.TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+{/home/joernih/.TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
 
-LaTeX Warning: File `assignment_gretl_files/mediabag/9we7fAAAAABklEQVQDAA.png' not found on input line 214.
+LaTeX Warning: File `assignment_r_files/mediabag/9we7fAAAAABklEQVQDAA.png' not found on input line 348.
 
 
-! Package luatex.def Error: File `assignment_gretl_files/mediabag/9we7fAAAAABklEQVQDAA.png' not found: using draft setting.
+! Package luatex.def Error: File `assignment_r_files/mediabag/9we7fAAAAABklEQVQDAA.png' not found: using draft setting.
 
 See the luatex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.214 ...l_files/mediabag/9we7fAAAAABklEQVQDAA.png}}
+l.348 ...r_files/mediabag/9we7fAAAAABklEQVQDAA.png}}
                                                   
 
 Here is how much of LuaTeX's memory you used:
- 24297 strings out of 475900
+ 24793 strings out of 475900
  100000,1373583 words of node,token memory allocated
- 2780 words of node memory still in use:
-   10 hlist, 1 vlist, 2 rule, 22 disc, 2 local_par, 2 dir, 45 glue, 13 kern, 9 penalty, 2 margin_kern, 211 glyph, 17 attribute, 66 glue_spec, 17 attribute_list, 1 temp, 7 if_stack, 2 write, 1 pdf_dest, 3 pdf_colorstack nodes
-   avail lists: 1:1,2:292,3:287,4:100,5:156,6:46,7:3711,8:69,9:189,10:10,11:255,12:1
- 46552 multiletter control sequences out of 65536+600000
- 61 fonts using 18917075 bytes
- 108i,7n,114p,11237b,357s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 22451 words of node memory still in use:
+   89 hlist, 1 vlist, 2 rule, 127 disc, 30 local_par, 2 dir, 4 math, 641 glue, 84 kern, 376 penalty, 11 margin_kern, 1846 glyph, 116 attribute, 66 glue_spec, 116 attribute_list, 1 temp, 7 if_stack, 2 write, 4 pdf_start_link, 4 pdf_end_link, 1 pdf_dest, 4 pdf_action, 11 pdf_colorstack nodes
+   avail lists: 1:2,2:231,3:865,4:86,5:59,6:90,7:1722,8:69,9:272,10:9,12:1
+ 47039 multiletter control sequences out of 65536+600000
+ 61 fonts using 18911323 bytes
+ 108i,7n,114p,11233b,579s stack positions out of 10000i,1000n,20000p,200000b,200000s
 !  ==> Fatal error occurred, no output PDF file produced!

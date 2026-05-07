@@ -1,0 +1,211 @@
+---
+title: "Feedback on Assignment: Strengths and Weaknesses"
+---
+
+## Strengths
+
+### 1. Clear and relevant research question  
+- The topic “Does higher education lead to higher salary?” is well-motivated and clearly connected to labor economics and relevant literature (e.g. Blaug, 1972).  
+- The data choice (large Kaggle job-salary dataset) is appropriate for the question.
+
+### 2. Good coverage of required econometric components  
+The assignment touches on all the requested elements:
+
+- **Simple regression**: You estimate a bivariate model (salary on education), present coefficients, p‑values, $R^2$, and a prediction interval.  
+- **Multiple regression**: You add experience and industry, interpret coefficients, compare with the simple model, and correctly discuss omitted-variable bias.  
+- **Dummy-variable model**: You construct and interpret remote‑work dummies (\( \text{remote} = \text{YES}, \text{NO} \), hybrid as base), and qualitatively discuss their effect.  
+- **Model comparison**: You compute predicted salaries for specific profiles in different models and argue for a preferred model using $R^2$ and interpretation.
+
+This shows you understand the basic toolbox: coefficients, p‑values, $R^2$, prediction, and dummy coding.
+
+### 3. Interpretation of coefficients and significance  
+- You consistently interpret intercepts and slopes in meaningful economic terms (e.g. “predicted yearly salary for lowest education” and “additional education decreases salary by 482.9”).  
+- You correctly use the 5% significance level and recognize that very small p‑values imply strong statistical significance.  
+- In the multiple regression, you identify that experience has a large positive effect and industry is not significant, and you explicitly connect that to the p‑values.
+
+### 4. Awareness of model limitations  
+- You notice the very low $R^2$ in the simple regression and correctly conclude that education alone explains almost none of the variation in salary.  
+- You question the negative coefficient on education and explicitly mention omitted variables such as work experience, skills, and industry.  
+- In the multiple regression, you explicitly mention possible omitted variable bias in the simple model and recognize that including experience changes the education effect.
+
+### 5. Use of prediction and intervals  
+- You go beyond just presenting coefficients and actually **use the model** for:
+  - Point predictions for several education levels.
+  - A (approximate) 95% prediction interval for a specific education level.
+- This shows good understanding of how regression is used in practice, not merely as an estimation exercise.
+
+### 6. Structure roughly follows assignment instructions  
+- Sections 2, 3, 4, and 5 are clearly labelled in line with the task (simple regression, multiple regression, dummy analysis, model selection).
+- You also link to the script/estm.R and mention where the dataset is stored, which is good practice for reproducibility.
+
+---
+
+## Weaknesses and Suggestions for Improvement
+
+### 1. Conceptual issues: sign and coding of “education level”
+
+**Problem:**  
+- You find that higher education is associated with *lower* salary, both in the simple and multiple models.  
+- You report “Education level = -482.9” in simple regression and “Education level = -463.991” in multiple regression.  
+
+**Likely cause:**  
+- You probably have **reverse coding** (e.g. 1 = highest education, 5 = lowest) or a non‑intuitive numeric coding of education. In that case, a **negative** coefficient is actually consistent with *higher* education increasing salary (because the number goes down as education goes up).
+
+**What’s missing:**  
+- You never show or discuss **how education is coded** (which categories, which numbers).  
+- You therefore interpret the sign mechanically as “negative correlation”, which may be wrong if the coding is reversed.
+
+**Suggestion:**  
+- Explicitly describe the encoding (e.g. 1 = PhD, 2 = Master, …, 5 = High school).  
+- Then re-interpret the sign correctly or, better: recode education so that higher values mean higher education, so a positive coefficient directly maps to your RQ.  
+- If you keep strange coding, show a small table mapping category → code and interpret accordingly.
+
+### 2. Substantive interpretation: significance vs. effect size  
+
+You sometimes conflate *statistical significance* with *economic importance*:
+
+- Simple regression: p‑value is extremely small, so you say “there is a big significance between salary and education level”, but $R^2 \approx 0.0003$; the effect is statistically clear but practically tiny.  
+- Multiple regression: you call experience’s effect “extremely positive” without putting it in context (e.g. what is the typical salary or range?).
+
+**Suggestions:**
+
+- Distinguish clearly between:
+  - **Statistical significance** (p‑value < 0.05).
+  - **Magnitude / practical significance** (is 5000 or 2700 large or small relative to average salary?).  
+- When $R^2$ is close to 0, explicitly state that “although the effect is statistically significant due to large $n$, the model has almost no explanatory power.”
+
+### 3. Prediction interval calculation is only approximate and not transparently justified  
+
+For the 95% prediction interval:
+
+- You take $1.96 \cdot \text{SER}$ and simply add/subtract from the prediction:
+  \[
+  \hat{y} \pm 1.96 \cdot \hat\sigma \,.
+  \]
+- You do not:
+  - Explain that this ignores the $(1 + h_0)$ factor from the exact formula.
+  - State that you are ignoring estimation uncertainty in the slope and intercept.
+
+This is **acceptable as a rough approximation**, but:
+
+**Suggestions:**
+
+- Explicitly acknowledge: “We approximate the prediction interval using $\hat y \pm 1.96\hat\sigma$, effectively assuming a large sample and ignoring the leverage term.”  
+- Better: show the formula and, if using R, use `predict(..., interval = "prediction")` and report the exact interval.
+
+### 4. Over‑reliance on $R^2$ for model choice  
+
+In your conclusion you prefer model 2 largely because:
+
+- It has the highest $R^2$ (19.2% vs. very low values in others).
+
+**This is incomplete:**
+
+- $R^2$ alone is not always the best criterion; adjusted $R^2$ or AIC/BIC are often better for comparing models with different numbers of predictors.  
+- The theoretical plausibility and interpretability of the model should be emphasized more than just $R^2$.  
+
+**Suggestions:**
+
+- Mention at least one additional model selection criterion: adjusted $R^2$, AIC, BIC, out-of-sample RMSE, etc.  
+- Note that adding many weak variables can increase raw $R^2$ but harm generalization.  
+- Argue that model 2 is preferred because:
+  - It includes theoretically important variables (education, experience, remote work etc.).
+  - Coefficients make substantive sense.
+  - It improves adjusted $R^2$ compared to the simple model.
+
+### 5. Incomplete description of variables and data cleaning  
+
+Throughout the assignment, some key points about the dataset and variables are missing or vague:
+
+- You mention 250,000 observations and 10 variables, but you do not provide:
+  - A clear **data description** table (variable names, types, units, coding).  
+  - Any discussion of **missing values**, outliers, or transformations (are salaries in yearly units? Which currency? Log‑transform considered?).  
+- For some variables (industry, remote work), we do not see:
+  - How many categories they have.
+  - Which one is the base category in regression (you mention hybrid as reference, but for industry you just say “not significant”).
+
+**Suggestions:**
+
+- Add a small table in Section 1:
+  - Variable, description, type (numeric, factor), codings and units.  
+- Briefly describe any cleaning steps: dropped missing salaries? Filtered unrealistic values?  
+- For categorical predictors, always state:
+  - Reference category.
+  - How many dummies were included.
+
+### 6. Dummy variable section is underdeveloped  
+
+You do use remote‑work dummies but:
+
+- No **regression table** is shown (coefficients, SE, p-values, $R^2$).  
+- You say “the model does not include interaction terms,” but the task *explicitly* allows/encourages interaction effects.
+
+**Suggestions:**
+
+- Present the remote‑work regression output in a small table: intercept, Remote=YES, Remote=NO, their p‑values, $R^2$.  
+- Consider at least **one interaction**, e.g.:
+  - Remote × Experience (does experience pay off more in remote jobs?),
+  - Remote × Education (is the education premium different when working remotely?).  
+- Interpret any interaction: explain how the effect of education or experience differs across remote/hybrid/on‑site groups.
+
+### 7. Formatting, LaTeX, and minor technical issues  
+
+There are several small technical and presentational problems:
+
+- Spelling/grammar:  
+  - “higer salary”, “higer”, “significance is big”, “indusrty” etc.  
+  - Careless spelling weakens the professional impression.
+- LaTeX / formatting:  
+  - Expressions like `$$6.45*10^-20$$` should be `$6.45 \cdot 10^{-20}$`.  
+  - In one place you write `14-5` which is unclear; probably `–1.45` or similar.  
+  - Some formulas repeat words (“Salery”) and mix comma/point as decimal separators.
+- Word count code:  
+  - You define `ford_count <- count_words_qmd("assignment_r.qmd")` and then `cat("Word count:", word_count)`, but `word_count` is never defined; this code will error.
+
+**Suggestions:**
+
+- Run a spellchecker and grammar check on the entire text.  
+- Standardize LaTeX to proper math notation and use a single decimal separator.  
+- Fix or remove non‑working code chunks (or show the actual word count, not broken code).  
+- Clean the Quarto structure: remove duplicated `knitr::knit_exit()` chunks; ensure YAML keys are correctly indented.
+
+### 8. Lack of model diagnostics  
+
+The assignment does not discuss:
+
+- Residual plots,
+- Heteroskedasticity,
+- Nonlinearity (e.g. log-salary, squared experience),
+- Multicollinearity.
+
+Given the large dataset, violations of classical assumptions are likely.
+
+**Suggestions:**
+
+- Briefly inspect at least one diagnostic, e.g.:
+  - Plot residuals vs fitted.
+  - Histogram or QQ-plot of residuals.  
+- Mention whether heteroskedasticity or nonlinearity appears to be a concern and, if so, suggest remedies (robust SEs, log-salary, polynomial terms).
+
+---
+
+## Summary
+
+Overall, the assignment successfully:
+
+- Answers the research question using multiple models,
+- Demonstrates understanding of regression coefficients, significance, prediction, and dummy variables,
+- Recognizes omitted-variable bias and the importance of including experience.
+
+However, for a stronger econometrics mini‑thesis, you should:
+
+- Clarify and possibly recode key variables (especially education) to ensure the sign and interpretation make economic sense,  
+- Separate statistical significance from economic importance,  
+- Use more rigorous model diagnostics and selection criteria,  
+- Develop the dummy-variable and interaction analysis more fully,  
+- Improve clarity of data description, coding, and formatting.
+
+Addressing these points would make the work more robust, transparent, and convincing both statistically and substantively.
+
+
+

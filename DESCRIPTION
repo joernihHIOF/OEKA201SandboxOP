@@ -17,3 +17,9 @@ LazyData: true
 RoxygenNote: 7.3.3
 Depends: 
     R (>= 3.5)
+Imports: 
+    ellmer,
+    withr,
+    webshot2
+Config/roxygen2/version: 8.0.0
+

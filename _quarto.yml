@@ -3,9 +3,9 @@ project:
   output-dir: docs
   render:
     - "index.qmd"
-#    - "assignment_gretl.qmd"
+    - "assignment_gretl.qmd"
     - "assignment_r.qmd"
-#    - "AIrep/qmdrds/conv.qmd"
+    - "AIrep/qmdrds/conv.qmd"
 
 website:
   title: "OEKA201AssignmentOPAMPJ"
@@ -14,12 +14,12 @@ website:
       -  text: Home
          href: index.qmd
       -  text: Bjørnar's assignment using Gretl
-#         href: assignment_gretl.qmd
+         href: assignment_gretl.qmd
       -  text: Bjørnar's assignment using R
-#         href: assignment_r.qmd
+         href: assignment_r.qmd
     right:
       - text: AI-conversation
-#        href: AIrep/qmdrds/conv.qmd
+        href: AIrep/qmdrds/conv.qmd
 format:
   html:
     toc: true

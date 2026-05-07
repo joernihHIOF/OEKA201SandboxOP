@@ -1,4 +1,3 @@
-library(ellmer)
 ##############################################################################################################
 ### Functions
 get_current_time <- function(tz = "UTC") {
@@ -9,8 +8,8 @@ get_current_time <- ellmer::tool(
   name = "get_current_time",
   description = "Returns the current time.",
   arguments = list(
-    tz = type_string(
-      "Time zone to display the current time in. Defaults to `\"UTC\"`.",
+    tz = ellmer::type_string(
+      "Time zone to display the current time in. Defaults to 'UTC'.",
       required = FALSE
     )
   )
@@ -25,12 +24,12 @@ screenshot_website <- ellmer::tool(
   name = "screenshot_website",
   description = "Take a screenshot of a website.",
   arguments = list(
-    url = type_string("The URL of the website")
+    url = ellmer::type_string("The URL of the website")
   )
 )
 ##############################################################################################################
-### Initialize 
-####  1. The data-variables initializer 
+### Initialize
+####  1. The data-variables initializer
 AIasst <- R6::R6Class("AIasst",
   public = list(
     lmodel = NULL,
@@ -46,8 +45,8 @@ AIasst <- R6::R6Class("AIasst",
   )
 )
 
-#### 2. The method initializer 
-AIasst$set("public", "initialize", 
+#### 2. The method initializer
+AIasst$set("public", "initialize",
 	     function(
           fill=NULL,
 		      fild=NULL,
@@ -60,7 +59,7 @@ AIasst$set("public", "initialize",
           "groq/llama3-8b-8192",
           "google_gemini/gemini-2.5-flash",
           "anthropic/claude-sonnet-4-20250514",
-          "perplexity/sonar")[1], 
+          "perplexity/sonar")[1],
 		      qmd=NULL,
 		      tools=NULL,
 		      refdr="AIrep") {

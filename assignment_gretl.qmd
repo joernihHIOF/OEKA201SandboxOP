@@ -185,3 +185,5 @@ We prefer model 2 because it has the highest R² which is 19,2%, compared to the
 
 
 
+
+
